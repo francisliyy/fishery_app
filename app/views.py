@@ -2,6 +2,18 @@ from flask import render_template
 from flask.ext.appbuilder.models.sqla.interface import SQLAInterface
 from flask.ext.appbuilder import ModelView
 from app import appbuilder, db
+from flask_appbuilder import BaseView, expose, has_access
+
+
+
+class ProcessView(BaseView):
+
+
+    @expose('/showProcess/')
+    @has_access
+    def showProcess(self):
+
+        return self.render_template('/process.html')
 
 """
     Create your Views::
@@ -17,6 +29,7 @@ from app import appbuilder, db
     appbuilder.add_view(MyModelView, "My View", icon="fa-folder-open-o", category="My Category", category_icon='fa-envelope')
 """
 
+appbuilder.add_view(ProcessView,"prcess", href='/processview/showProcess', category='Process View')
 """
     Application wide 404 error handler
 """
