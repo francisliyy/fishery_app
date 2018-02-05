@@ -1,9 +1,10 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
-  	//testechart:'./javascript/testechart.js',
+  	processjs:'./javascript/process.js',
     //countyHeatChart:'./javascript/countyHeatChart.js',
   },
   devtool: 'inline-source-map',
@@ -11,14 +12,21 @@ module.exports = {
     contentBase: './dist'
   },
   plugins: [
-  	 new CleanWebpackPlugin(['dist'])
+  	 new CleanWebpackPlugin(['dist']),
+     new webpack.ProvidePlugin({
+            '$': 'jquery',
+            'jQuery': 'jquery',
+            'window.jQuery': 'jquery',
+            'Popper': 'popper.js',
+            'Waves': 'node-waves'
+        })
   ],
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
-	  rules: [
-	  ]
+	  loaders: [          
+    ]
   }
 };
