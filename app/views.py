@@ -1,11 +1,9 @@
 from flask import render_template
-from flask.ext.appbuilder.models.sqla.interface import SQLAInterface
-from flask.ext.appbuilder import ModelView
+from flask_appbuilder.models.sqla.interface import SQLAInterface
+from flask_appbuilder.views import ModelView, CompactCRUDMixin
 from app import appbuilder, db
 from flask_appbuilder import BaseView, expose, has_access
-from app.models import UploadFile
-
-
+from app.models import *
 
 class ProcessView(BaseView):
 
@@ -17,16 +15,18 @@ class ProcessView(BaseView):
         return self.render_template('/process.html')
 
 
-class UploadFileView(ModelView):
+class StockSynFileView(ModelView):
 
-    datamodel = SQLAInterface(UploadFile)
+    datamodel = SQLAInterface(StockSynFile)
 
-    label_columns = {'name':'Upload File Name'}
-
-    add_columns = ['name','upload_user']
-
-    list_columns = ['id','name','upload_user','upload_date']
-
+    label_columns = {'file_name': 'File Name','description':'Description','download': 'Download'}
+    add_columns = ['file', 'description']
+    edit_columns = ['file', 'description']
+    list_columns = ['file_name', 'description', 'created_by', 'created_on', 'changed_by', 'changed_on', 'download']
+    show_fieldsets = [
+        ('Info', {'fields': ['file_name', 'description', 'download']}),
+        ('Audit', {'fields': ['created_by', 'created_on', 'changed_by', 'changed_on'], 'expanded': False})
+    ]
 
 """
     Create your Views::
@@ -52,7 +52,5 @@ def page_not_found(e):
 
 db.create_all()
 
-appbuilder.add_view(UploadFileView,"File Management", icon='fa-folder-open-o', category='Management',category_icon="fa-envelope")
+appbuilder.add_view(StockSynFileView,"Stock Synthesis File", icon='fa-folder-open-o', category='Management',category_icon="fa-envelope")
 appbuilder.add_view(ProcessView,"prcess", href='/processview/showProcess', category='Process View')
-
-
