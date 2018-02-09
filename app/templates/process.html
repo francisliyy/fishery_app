@@ -1,8 +1,6 @@
 {% extends "appbuilder/base.html" %}
 {% block head_css %}
     {{ super() }}
-    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/flaskbody.css')}}"></link>
-    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/process.css')}}"></link>
     <link rel="stylesheet" href="{{url_for('static',filename='assets/css/acc-wizard.min.css')}}"></link>
 {% endblock %}
 {% block content %}
@@ -228,10 +226,9 @@
       </div>
     </div>
 {% block tail_js %}
-	<script src="{{url_for('static',filename='assets/node-modules/jquery/dist/jquery.min.js')}}"></script>
-	<script src="{{url_for('static',filename='assets/node-modules/bootstrap/dist/bootstrap.min.js')}}"></script>
-    <script src="{{url_for('static',filename='assets/dist/accwizardjs.bundle.js')}}"></script>
-    <script src="{{url_for('static',filename='assets/dist/processjs.bundle.js')}}"></script>
+	{{super()}}
+    <script src="{{url_for('static',filename='assets/javascript/accwizard.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/javascript/process.js')}}"></script>
 {% endblock %}
 
 {% endblock %}
