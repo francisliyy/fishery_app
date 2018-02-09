@@ -5,7 +5,7 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
   	processjs:'./javascript/process.js',
-    accwizardjs:'./javascript/accwizard.js',
+    //accwizardjs:'./javascript/accwizard.js',
     //countyHeatChart:'./javascript/countyHeatChart.js',
   },
   devtool: 'inline-source-map',
@@ -27,7 +27,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   module: {
-	  loaders: [          
+	  loaders: [       
     ]
   }
 };
