@@ -47,7 +47,7 @@
     //     actions are taken (such as gaining access to the global object).
     //  *  It disables features that are confusing or poorly thought out.
 
-//    "use strict";
+    //    "use strict";
 
     var pluginName = 'accwizard';
 
@@ -233,12 +233,12 @@
             // Whenever a new accordion panel is shown, update
             // the vertical navigation task list to make
             // the current panel the active task.
-//            $(".panel-collapse",$el).on("shown", function () {
-//                console.log('show');
-//                currentHash = "#" + this.id;
-//                makeTaskActive(currentHash);
-//                window.location.hash = currentHash;
-//            });
+            //$(".panel-collapse",$el).on("shown", function () {
+            //    console.log('show');
+            //    currentHash = "#" + this.id;
+            //    makeTaskActive(currentHash);
+            //    window.location.hash = currentHash;
+            //});
 
             // Whenever a panel title is clicked, update
             // the vertical navigation task list to make
