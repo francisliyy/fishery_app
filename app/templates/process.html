@@ -16,11 +16,11 @@
     <div class="row acc-wizard">
       <div class="col-md-3" style="padding-left: 2em;">
         <p style="margin-bottom: 2em;">
-          Follow the steps below to add an accordion wizard to your web page.
+          Follow the steps below:
         </p>
         <ol class="acc-wizard-sidebar">
-          <li class="acc-wizard-todo"><a href="#prerequisites">Prerequisites</a></li>
-          <li class="acc-wizard-todo"><a href="#addwizard">Add Wizard</a></li>
+          <li class="acc-wizard-todo"><a href="#generalinput">Genral Input</a></li>
+          <li class="acc-wizard-todo"><a href="#stockassessment">Stock Assessment Model Input</a></li>
           <li class="acc-wizard-todo"><a href="#adjusthtml">Adjust HTML</a></li>
           <li class="acc-wizard-todo"><a href="#viewpage">Release</a></li>
         </ol>
@@ -30,14 +30,14 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a href="#prerequisites" data-parent="#accordion-demo" data-toggle="collapse">
-                  Install Bootstrap and jQuery
+                <a href="#generalinput" data-parent="#accordion-demo" data-toggle="collapse">
+                  General Input
                 </a>
               </h4>
             </div>
-            <div id="prerequisites" class="panel-collapse collapse in">
+            <div id="generalinput" class="panel-collapse collapse in">
               <div class="panel-body">
-                <form id="form-prerequisites">
+                <form id="form-generalinput">
                   <p>
                     The accordion wizard depends on two other open source packages:
                     <ul>
@@ -52,20 +52,14 @@
                     You'll include the CSS styles for Bootstrap in the
                     <code>&lt;head&gt;</code> of your HTML file, for example:
                   </p>
-                  <pre><!--
-                  -->&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;<!--
-                  --></pre>
                   <p>
                     and you'll include jQuery and Bootstrap javascript files at the
                     end of your <code>&lt;body&gt;</code> section, for example:
                   </p>
-                  <pre><!--
-                  -->&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
-<!--              -->&lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;<!--
-                  --></pre>
+                  <pre></pre>
                 </form>
               </div> <!--/.panel-body -->
-            </div> <!-- /#prerequisites -->
+            </div> <!-- /#generalinput -->
           </div> <!-- /.panel.panel-default -->
 
           <div class="panel panel-default">
@@ -92,18 +86,11 @@
                     javascript files from the <code>/release</code> folder
                     directly in your HTML without modifying them:
                   </p>
-                  <pre><!--
-                  -->&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
-<!--              -->&lt;link href="css/acc-wizard.min.css" rel="stylesheet"&gt;<!--
-                  --></pre>
+                  <pre></pre>
                   <p>
                     and
                   </p>
-                  <pre><!--
-                  -->&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
-<!--              -->&lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
-<!--              -->&lt;script src="js/acc-wizard.min.js"&gt;&lt;/script&gt;<!--
-                  --></pre>
+                  <pre></pre>
                   <p>
                     The release styles for the accordion wizard are based on
                     Bootstrap's default styles. If you've tweaked the Bootstrap
@@ -167,26 +154,13 @@
                     complete, you can instead add the <code>.acc-wizard-completed</code>
                     class to the corresponding <code>&lt;li&gt;</code> elements.
                   </p>
-                  <pre><!--
-                  -->&lt;ol class="acc-wizard-sidebar"&gt;
-<!--              -->  &lt;li class="acc-wizard-todo"&gt;&lt;a href="#prerequisites">Install Bootstrap and jQuery&lt;/a&gt;&lt;/li&gt;
-<!--              -->  &lt;li class="acc-wizard-todo"&gt;&lt;a href="#addwizard">Add Accordion Wizard&lt;/a&gt;&lt;/li&gt;
-<!--              -->  &lt;li class="acc-wizard-todo"&gt;&lt;a href="#adjusthtml">Adjust Your HTML Markup&lt;/a&gt;&lt;/li&gt;
-<!--              -->  &lt;li class="acc-wizard-todo"&gt;&lt;a href="#viewpage">Test Your Page&lt;/a&gt;&lt;/li&gt;
-<!--              -->&lt;/ol><!--
-                  --></pre>
+                  <pre></pre>
                   <p>
                     Finally, you'll want to active the wizard in your javascript.
                     That's nothing more than simply calling the plugin on an
                     appropriate selection.
                   </p>
-                  <pre><!--
-                  -->&lt;script&gt;
-<!--              -->    $(window).load(function() {
-<!--              -->        $(".acc-wizard").accwizard();
-<!--              -->    });
-<!--              -->&lt;/script&gt;<!--
-                 --></pre>
+                  <pre></pre>
                   <p>
                     The default options are probably fine for most uses, but
                     there are many customizations you can use when you activate
