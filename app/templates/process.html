@@ -133,46 +133,41 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a href="#addwizard" data-parent="#accordion-demo" data-toggle="collapse">
-                  Add Accordion Wizard
+                <a href="#stockassessment" data-parent="#accordion-demo" data-toggle="collapse">
+                  tock Assessment Model Input
                 </a>
               </h4>
             </div>
-            <div id="addwizard" class="panel-collapse collapse in">
+            <div id="stockassessment" class="panel-collapse collapse in">
               <div class="panel-body">
-                <form id="form-addwizard">
-                  <p>
-                    If you haven't already found it, the source code for the
-                    accordion wizard is available on github
-                    <a href="https://github.com/sathomas/acc-wizard">here</a>.
-                    There are two main folders, <code>/src</code> and
-                    <code>/release</code>.
-                  </p>
-                  <p>
-                    There are two different ways to add the accordion wizard to
-                    your pages. The simplest approach is just to add the CSS and
-                    javascript files from the <code>/release</code> folder
-                    directly in your HTML without modifying them:
-                  </p>
-                  <pre></pre>
-                  <p>
-                    and
-                  </p>
-                  <pre></pre>
-                  <p>
-                    The release styles for the accordion wizard are based on
-                    Bootstrap's default styles. If you've tweaked the Bootstrap
-                    styles (e.g. by changing the link color), you'll want to
-                    make corresponding tweaks to <code>acc-wizard.min.css</code>.
-                  </p>
-                  <p>
-                    Alternatively, if you're building custom CSS and javascript,
-                    then you might want to start with the files in the <code>/src</code>
-                    folder and adapt them to your source code. The <code>/src</code>
-                    folder contains a LESS file and uncompressed (and commented)
-                    javascript. Note that the <code>acc-wizard.less</code> file
-                    depends on variables defined in Bootstrap's <code>variables.less</code>
-                    file.
+                <form id="form-stockassessment">
+                  <h2>Mixing matrix</h2>
+                  <h4>From/To
+                      <button style="margin-left: 60px" type="button" class="btn btn-danger">Standardize</button>
+                  </h4>
+                  <div class="form-group" style="height:34px">
+                    <label class="col-md-2 control-label"></label>
+                    <label class="col-md-3 control-label">Unit 1</label>  
+                    <label class="col-md-3 control-label">Unit 2</label>            
+                  </div>
+                  <div class="form-group form-inline">
+                    <label class="col-md-2 control-label">Unit 1</label>
+                    <div class="col-md-3 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="shortTermTxt" placeholder="3"/>%
+                    </div> 
+                    <div class="col-md-3 input-group">      
+                        <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="shortTermTxt" placeholder="3"/>%
+                    </div>              
+                  </div>
+                  <div class="form-group form-inline">
+                    <label class="col-md-2 control-label">Unit 2</label>
+                    <div class="col-md-3 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="shortTermTxt" placeholder="3"/>%
+                    </div> 
+                    <div class="col-md-3 input-group">      
+                        <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="shortTermTxt" placeholder="3"/>%
+                    </div>
+                  </div>
                 </form>
               </div> <!--/.panel-body -->
             </div> <!-- /#addwizard -->
