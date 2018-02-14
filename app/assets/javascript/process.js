@@ -8,6 +8,14 @@ function onNext(parent, panel) {
       .addClass("acc-wizard-completed");
 }
 
-$(window).on('load',function () {
-  $(".acc-wizard").accwizard({onNext:onNext});
+$(function() {
+
+	$(".acc-wizard").accwizard({onNext:onNext});
+
+    $('#projectionDate').datetimepicker({
+    	format:'MMMM Do YYYY',
+    }).on('dp.change', function(e) {
+    	
+    });
+
 });
