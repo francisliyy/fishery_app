@@ -26,7 +26,10 @@
           <li class="acc-wizard-todo"><a href="#stockassessment2">Stock Assessment Model Input 2</a></li>
           <li class="acc-wizard-todo"><a href="#ibParam">Initial&Biological Parameters</a></li>
           <li class="acc-wizard-todo"><a href="#naturalmortality">Natural Mortality</a></li>
-          <li class="acc-wizard-todo"><a href="#ibParam2">Initial&Biological Parameters</a></li>
+          <li class="acc-wizard-todo"><a href="#recruitment">Recruitment</a></li>
+          <li class="acc-wizard-todo"><a href="#mgtopt1">Management Options Part1</a></li>
+          <li class="acc-wizard-todo"><a href="#mgtopt2">Management Options Part2</a></li>
+          <li class="acc-wizard-todo"><a href="#mgtopt3">Management Options Part3</a></li>
         </ol>
       </div>
       <div class="col-md-9" style="padding-right: 2em;">
@@ -330,14 +333,161 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a href="#ibParam2" data-parent="#accordion-demo" data-toggle="collapse">
-                  Test Your Page
+                <a href="#mgtopt1" data-parent="#accordion-demo" data-toggle="collapse">
+                  Management Options Part1
                 </a>
               </h4>
             </div>
-            <div id="ibParam2" class="panel-collapse collapse in">
+            <div id="mgtopt1" class="panel-collapse collapse in">
               <div class="panel-body">
-                <form id="form-ibParam2">
+                <form id="form-mgtopt1">
+                  <h4 style="display:inline-block;width: 50%;float: left">Stock1</h4>
+                  <h4 style="display:inline-block;width: 50%">Stock2</h4>  
+                  <div class="form-group form-inline" >
+                    <div class="col-md-6 ">
+                      <input type="radio" style="margin-right: 10px" name="recruitTypeStock1" id="historyStock1" value="1">Input from history
+                    </div>
+                    <div class="col-md-6 input-group">
+                      <input type="radio" style="margin-right: 10px" name="recruitTypeStock2" id="historyStock2" value="1">Input from history
+                    </div>
+                  </div>
+                  <div class="form-group form-inline" >
+                    <div class="col-md-2 input-group" style="margin-left: 50px">
+                      <label class="radio-inline" >
+                          <input type="radio" name="historySt1" id="hst1radio1" value="1">Lower 25%
+                      </label>
+                    </div>
+                    <div class="col-md-3 input-group" >                           
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="hst1txt1" placeholder="10000000"/>
+                    </div>
+                    <div class="col-md-2 input-group" style="margin-left: 50px">
+                      <label class="radio-inline">
+                          <input type="radio" style="margin-right: 10px" name="historySt2" id="hst2radio1" value="1">Lower 25%
+                        </label>
+                    </div> 
+                    <div class="col-md-3 input-group" >                           
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="hst2txt1" placeholder="10000000"/>
+                    </div>
+                  </div>
+                  <div class="form-group form-inline" >
+                    <div class="col-md-2 input-group" style="margin-left: 50px">
+                      <label class="radio-inline" >
+                          <input type="radio" name="historySt1" id="hst1radio2" value="1">Median
+                      </label>
+                    </div>
+                    <div class="col-md-3 input-group" >                           
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="hst1txt2" placeholder="10000000"/>
+                    </div>
+                    <div class="col-md-2 input-group" style="margin-left: 50px">
+                      <label class="radio-inline">
+                          <input type="radio" style="margin-right: 10px" name="historySt2" id="hst2radio2" value="1">Median
+                        </label>
+                    </div> 
+                    <div class="col-md-3 input-group" >                           
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="hst2txt2" placeholder="10000000"/>
+                    </div>
+                  </div>
+                  <div class="form-group form-inline" >
+                    <div class="col-md-2 input-group" style="margin-left: 50px">
+                      <label class="radio-inline" >
+                          <input type="radio" name="historySt1" id="hst1radio3" value="1">Mean
+                      </label>
+                    </div>
+                    <div class="col-md-3 input-group" >                           
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="hst1txt3" placeholder="10000000"/>
+                    </div>
+                    <div class="col-md-2 input-group" style="margin-left: 50px">
+                      <label class="radio-inline">
+                          <input type="radio" style="margin-right: 10px" name="historySt2" id="hst2radio3" value="1">Mean
+                        </label>
+                    </div> 
+                    <div class="col-md-3 input-group" >                           
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="hst2txt3" placeholder="10000000"/>
+                    </div>
+                  </div>
+                  <div class="form-group form-inline" >
+                    <div class="col-md-2 input-group" style="margin-left: 50px">
+                      <label class="radio-inline" >
+                          <input type="radio" name="historySt1" id="hst1radio4" value="1">Upper 25%
+                      </label>
+                    </div>
+                    <div class="col-md-3 input-group" >                           
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="hst1txt4" placeholder="10000000"/>
+                    </div>
+                    <div class="col-md-2 input-group" style="margin-left: 50px">
+                      <label class="radio-inline">
+                          <input type="radio" style="margin-right: 10px" name="historySt2" id="hst2radio4" value="1">Upper 25%
+                        </label>
+                    </div> 
+                    <div class="col-md-3 input-group" >                           
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="hst2txt4" placeholder="10000000"/>
+                    </div>
+                  </div>
+                  <div class="form-group form-inline" >
+                    <div class="col-md-2 input-group" style="margin-left: 50px">
+                      <label class="radio-inline" >
+                          <input type="radio" name="historySt1" id="hst1radio5" value="1">Other percentile
+                      </label>
+                    </div>
+                    <div class="col-md-3 input-group" >                           
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="hst1txt5" placeholder="10000000"/>%
+                    </div>
+                    <div class="col-md-2 input-group" style="margin-left: 50px">
+                      <label class="radio-inline">
+                          <input type="radio" style="margin-right: 10px" name="historySt2" id="hst2radio5" value="1">Other percentile
+                        </label>
+                    </div>
+                    <div class="col-md-3 input-group" >                           
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="hst2txt5" placeholder="10000000"/>%
+                    </div>
+                  </div>
+                  <div class="form-group form-inline" >
+                    <div class="col-md-2 input-group" style="margin-left: 50px">
+                      <button style="margin-left: 40px" type="button" class="btn btn-danger">Calculate</button>
+                    </div>
+                    <div class="col-md-3 input-group" >                           
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="hst1txt5" placeholder="10000000"/>
+                    </div>
+                    <div class="col-md-2 input-group" style="margin-left: 50px">
+                      <button style="margin-left: 40px" type="button" class="btn btn-danger">Calculate</button>
+                    </div>
+                    <div class="col-md-3 input-group" >                           
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="hst2txt5" placeholder="10000000"/>
+                    </div>
+                  </div>                  
+                </form>
+              </div> <!--/.panel-body -->
+            </div> <!-- /#adjusthtml -->
+          </div> <!-- /.panel.panel-default -->
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a href="#mgtopt2" data-parent="#accordion-demo" data-toggle="collapse">
+                  Management Options Part2
+                </a>
+              </h4>
+            </div>
+            <div id="mgtopt2" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <form id="form-mgtopt2">
+                  
+                </form>
+              </div> <!--/.panel-body -->
+            </div> <!-- /#adjusthtml -->
+          </div> <!-- /.panel.panel-default -->
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a href="#mgtopt3" data-parent="#accordion-demo" data-toggle="collapse">
+                  Management Options Part3
+                </a>
+              </h4>
+            </div>
+            <div id="mgtopt3" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <form id="form-mgtopt3">
                   
                 </form>
               </div> <!--/.panel-body -->
