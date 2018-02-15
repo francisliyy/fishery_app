@@ -342,8 +342,9 @@
               <div class="panel-body">
                 <form id="form-mgtopt1">
                   <h4 style="display:inline-block;width: 50%;float: left">Stock1</h4>
-                  <h4 style="display:inline-block;width: 50%">Stock2</h4>  
-                  <div class="form-group form-inline" >
+                  <h4 style="display:inline-block;width: 50%">Stock2</h4> 
+
+                  <div class="form-group form-inline" ><!-- first part -->
                     <div class="col-md-6 ">
                       <input type="radio" style="margin-right: 10px" name="recruitTypeStock1" id="historyStock1" value="1">Input from history
                     </div>
@@ -454,7 +455,145 @@
                     <div class="col-md-3 input-group" >                           
                       <input type="text" class="form-control" style="border-radius: 4px;width:auto;" id="hst2txt5" placeholder="10000000"/>
                     </div>
-                  </div>                  
+                  </div><!--/.first part -->
+
+                  <div class="form-group form-inline" ><!-- second part -->
+                    <div class="col-md-6 ">
+                      <input type="radio" style="margin-right: 10px" name="recruitTypeStock1" id="formulaStock1" value="1">Formula
+                    </div>
+                    <div class="col-md-6 input-group">
+                      <input type="radio" style="margin-right: 10px" name="recruitTypeStock2" id="fomulaStock2" value="1">Formula
+                    </div>
+                  </div>
+                  <div class="form-group form-inline" >
+                    <div class="col-md-5 input-group" style="margin-left: 50px">
+                      <label class="radio-inline" >
+                          <input type="radio" name="formulaStock1" id="fml1radio1" value="1">Beverton-Holt Mode
+                      </label>
+                    </div>
+                    <div class="col-md-5 input-group" style="margin-left: 50px">
+                      <label class="radio-inline">
+                          <input type="radio" name="formulaStock2" id="fml2radio1" value="1">Beverton-Holt Mode
+                        </label>
+                    </div>
+                  </div>
+                  <div class="form-group form-inline">
+                    <div class="col-md-1 input-group" style="margin-left: 60px">
+                      <label class="control-label">alpha</label>
+                    </div>
+                    <div class="col-md-1 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="fml1Bmalpha1" placeholder="3"/> 
+                    </div>
+                    <div class="col-md-1 input-group"> 
+                      <label class="col-md-1 control-label">beta</label>
+                    </div>
+                    <div class="col-md-1 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="fml1Bmbeta1" placeholder="3"/> 
+                    </div>
+                    <div class="col-md-1 input-group" style="margin-left: 110px">
+                      <label class="control-label">alpha</label>
+                    </div>
+                    <div class="col-md-1 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="fml2Bmalpha1" placeholder="3"/> 
+                    </div>
+                    <div class="col-md-1 input-group"> 
+                      <label class="col-md-1 control-label">beta</label>
+                    </div>
+                    <div class="col-md-1 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="fml2Bmbeta1" placeholder="3"/> 
+                    </div>             
+                  </div>
+                  <div class="form-group form-inline" >
+                    <div class="col-md-5 input-group" style="margin-left: 50px">
+                      <label class="radio-inline" >
+                          <input type="radio" name="formulaStock1" id="fml1radio2" value="1">Ricker Mode
+                      </label>
+                    </div>
+                    <div class="col-md-5 input-group" style="margin-left: 50px">
+                      <label class="radio-inline">
+                          <input type="radio" name="formulaStock2" id="fml2radio2" value="1">Ricker Mode
+                        </label>
+                    </div>
+                  </div>
+                  <div class="form-group form-inline">
+                    <div class="col-md-1 input-group" style="margin-left: 60px">
+                      <label class="control-label">alpha</label>
+                    </div>
+                    <div class="col-md-1 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="fml1Rmalpha1" placeholder="3"/> 
+                    </div>
+                    <div class="col-md-1 input-group"> 
+                      <label class="col-md-1 control-label">beta</label>
+                    </div>
+                    <div class="col-md-1 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="fml1Rmbeta1" placeholder="3"/> 
+                    </div>
+                    <div class="col-md-1 input-group" style="margin-left: 110px">
+                      <label class="control-label">alpha</label>
+                    </div>
+                    <div class="col-md-1 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="fml2Rmalpha1" placeholder="3"/> 
+                    </div>
+                    <div class="col-md-1 input-group"> 
+                      <label class="col-md-1 control-label">beta</label>
+                    </div>
+                    <div class="col-md-1 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="fml2Rmbeta1" placeholder="3"/> 
+                    </div>             
+                  </div>
+                  <div class="form-group form-inline" >
+                    <div class="col-md-5 input-group" style="margin-left: 50px">
+                      <label class="radio-inline" >
+                          <input type="radio" name="formulaStock1" id="fml1radio3" value="1">Moderfied Beverton-Holy Mode
+                      </label>
+                    </div>
+                    <div class="col-md-5 input-group" style="margin-left: 50px">
+                      <label class="radio-inline">
+                          <input type="radio" name="formulaStock2" id="fml2radio3" value="1">Moderfied Beverton-Holy Mode
+                        </label>
+                    </div>
+                  </div>
+                  <div class="form-group form-inline">
+                    <div class="col-md-1 input-group" style="margin-left: 60px">
+                      <label class="control-label">SSB0</label>
+                    </div>
+                    <div class="col-md-1 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="fml1Mbmalpha1" placeholder="3"/> 
+                    </div>
+                    <div class="col-md-1 input-group"> 
+                      <label class="col-md-1 control-label">R0</label>
+                    </div>
+                    <div class="col-md-1 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="fml1Mbmbeta1" placeholder="3"/> 
+                    </div>
+                    <div class="col-md-1 input-group" style="margin-left: 110px">
+                      <label class="control-label">SSB0</label>
+                    </div>
+                    <div class="col-md-1 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="fml2Mbmalpha1" placeholder="3"/> 
+                    </div>
+                    <div class="col-md-1 input-group"> 
+                      <label class="col-md-1 control-label">R0</label>
+                    </div>
+                    <div class="col-md-1 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="fml2Mbmbeta1" placeholder="3"/> 
+                    </div>             
+                  </div>
+                  <div class="form-group form-inline">
+                    <div class="col-md-1 input-group" style="margin-left: 60px">
+                      <label class="control-label">Steepnes</label>
+                    </div>
+                    <div class="col-md-3 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="fml1Mbmalpha1" placeholder="3"/> 
+                    </div>
+                    <div class="col-md-1 input-group" style="margin-left: 100px"> 
+                      <label class="col-md-1 control-label">Steepnes</label>
+                    </div>
+                    <div class="col-md-3 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="fml1Mbmbeta1" placeholder="3"/> 
+                    </div>             
+                  </div>
+
                 </form>
               </div> <!--/.panel-body -->
             </div> <!-- /#adjusthtml -->
