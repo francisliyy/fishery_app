@@ -3,6 +3,7 @@
     {{ super() }}
     <link rel="stylesheet" href="{{url_for('static',filename='assets/framework/acc-wizard/acc-wizard.min.css')}}"></link>
     <link rel="stylesheet" href="{{url_for('static',filename='assets/node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css')}}"></link>
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/node_modules/bootstrap-table/dist/bootstrap-table.min.css')}}"></link>
 {% endblock %}
 {% block content %}
 
@@ -23,11 +24,14 @@
           <li class="acc-wizard-todo"><a href="#generalinput">Genral Input</a></li>
           <li class="acc-wizard-todo"><a href="#stockassessment1">Stock Assessment Model Input 1</a></li>
           <li class="acc-wizard-todo"><a href="#stockassessment2">Stock Assessment Model Input 2</a></li>
-          <li class="acc-wizard-todo"><a href="#viewpage">Release</a></li>
+          <li class="acc-wizard-todo"><a href="#ibParam">Initial&Biological Parameters</a></li>
+          <li class="acc-wizard-todo"><a href="#ibParam1">Initial&Biological Parameters</a></li>
+          <li class="acc-wizard-todo"><a href="#ibParam2">Initial&Biological Parameters</a></li>
         </ol>
       </div>
       <div class="col-md-9" style="padding-right: 2em;">
         <div id="accordion-demo" class="panel-group">
+
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
@@ -230,21 +234,87 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a href="#viewpage" data-parent="#accordion-demo" data-toggle="collapse">
+                <a href="#ibParam" data-parent="#accordion-demo" data-toggle="collapse">
+                  Initial&Biological Parameters
+                </a>
+              </h4>
+            </div>
+            <div id="ibParam" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <form id="form-ibParam">
+                  <table id="table-ibParam" data-toggle="table">
+                      <thead>
+                          <tr>
+                              <th>Age</th>
+                              <th>Stock 1 mean</th>
+                              <th>CV</th>
+                              <th>Stock 2 mean</th>
+                              <th>CV</th>
+                              <th>Maturity Stock 1</th>
+                              <th>Maturity Stock 2</th>
+                              <th>Fecundity Stock 1</th>
+                              <th>Fecundity Stock 2</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>1</td>
+                              <td>Item 1</td>
+                              <td>$1</td>
+                              <td>Item 1</td>
+                              <td>$1</td>
+                              <td>Item 1</td>
+                              <td>$1</td>
+                              <td>Item 1</td>
+                              <td>$1</td>
+                          </tr>
+                          <tr>
+                              <td>2</td>
+                              <td>Item 2</td>
+                              <td>$2</td>
+                              <td>Item 2</td>
+                              <td>$2</td>
+                              <td>Item 2</td>
+                              <td>$2</td>
+                              <td>Item 2</td>
+                              <td>$2</td>
+                          </tr>
+                      </tbody>
+                  </table>                  
+                </form>
+              </div> <!--/.panel-body -->
+            </div> <!-- /#adjusthtml -->
+          </div> <!-- /.panel.panel-default -->
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a href="#ibParam1" data-parent="#accordion-demo" data-toggle="collapse">
                   Test Your Page
                 </a>
               </h4>
             </div>
-            <div id="viewpage" class="panel-collapse collapse in">
+            <div id="ibParam1" class="panel-collapse collapse in">
               <div class="panel-body">
-                <form id="form-viewpage">
-                  <p>
-                    Naturally, the last thing you'll want to do is test your
-                    page with the accordion wizard. Once you've confirmed that
-                    it's working as expected, release it on the world. Your
-                    users will definitely appreciate the feedback and guidance
-                    it gives to multi-step and complex tasks on your web site.
-                  </p>
+                <form id="form-ibParam1">
+                  
+                </form>
+              </div> <!--/.panel-body -->
+            </div> <!-- /#adjusthtml -->
+          </div> <!-- /.panel.panel-default -->
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a href="#ibParam2" data-parent="#accordion-demo" data-toggle="collapse">
+                  Test Your Page
+                </a>
+              </h4>
+            </div>
+            <div id="ibParam2" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <form id="form-ibParam2">
+                  
                 </form>
               </div> <!--/.panel-body -->
             </div> <!-- /#adjusthtml -->
@@ -259,6 +329,7 @@
     <script src="{{url_for('static',filename='assets/framework/acc-wizard/accwizard.js')}}"></script>
     <script src="{{url_for('static',filename='assets/node_modules/moment/min/moment.min.js')}}"></script>
     <script src="{{url_for('static',filename='assets/node_modules/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/node_modules/bootstrap-table/dist/bootstrap-table.js')}}"></script>
     <script src="{{url_for('static',filename='assets/javascript/process.js')}}"></script>
 {% endblock %}
 
