@@ -674,7 +674,112 @@
             <div id="mgtopt1" class="panel-collapse collapse in">
               <div class="panel-body">
                 <form id="form-mgtopt1">
-                  
+                  <h4>Biological reference points</h4>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">Biomass-based reference points</label>
+                    <div class="col-md-5 input-group">   
+                      <input type="text" class="form-control" style="border-radius: 4px" id="blomassTxt" placeholder="2"/> 
+                    </div>              
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">Harvest reference points</label>
+                    <div class="col-md-5 input-group">  
+                      <label class="radio-inline" >
+                        <input type="radio" name="harvestRadio" id="cacheRadio" value="1">Catch-based
+                      </label> 
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;float: none;margin-left: 10px" id="cacheTxt" placeholder=""/>mt                     
+                    </div>                                  
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-5 input-group">  
+                      <label class="radio-inline" >
+                        <input type="radio" name="harvestRadio" id="fbaseRadio" value="1">F-based
+                      </label> 
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;float: none;margin-left: 40px" id="fbaseTxt" placeholder="0.05"/>%                      
+                    </div>                                  
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">Harvest control rule</label>
+                    <label class="radio-inline">
+                      <input type="radio" name="harvestRuleRadio" id="contCRadio" value="1"> Constant catch
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="harvestRuleRadio" id="contFRadio" value="2"> Constant F
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="harvestRuleRadio" id="linearCRadio" value="3"> Linear catch
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="harvestRuleRadio" id="linearFRadio" value="4"> Linear F
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-5 input-group">
+                      <img style="width: 400px ; height: 300px"></img>
+                    </div>                    
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">Biomass-based reference points</label>
+                    <div class="col-md-5 input-group">  
+                      <label class="radio-inline" >
+                        Threshold I
+                      </label> 
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;float: none;margin-left: 40px" id="fbaseTxt" placeholder=""/>mt                     
+                    </div>                                  
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-5 input-group">  
+                      <label class="radio-inline" >
+                        Threshold II
+                      </label> 
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;float: none;margin-left: 40px" id="fbaseTxt" placeholder=""/>mt                     
+                    </div>                                  
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">Harvest reference points</label>
+                    <div class="col-md-8 input-group">
+                      <label class="radio-inline" >
+                        <input type="radio" name="harvestRadio" id="cRadio" value="1">Catch-based
+                      </label>  
+                      <label class="radio-inline" >
+                        Threshold I
+                      </label> 
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;float: none;margin-left: 40px" id="fbaseTxt" placeholder=""/>mt                     
+                    </div>                                  
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-8 input-group">  
+                      <label class="radio-inline" style="margin-left: 110px">
+                        Threshold II
+                      </label> 
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;float: none;margin-left: 40px" id="fbaseTxt" placeholder=""/>mt                     
+                    </div>                                  
+                  </div>  
+                  <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-8 input-group">
+                      <label class="radio-inline" >
+                        <input type="radio" name="harvestRadio" id="fRadio" value="1">F-based
+                      </label>  
+                      <label class="radio-inline" style="margin-left: 40px">
+                        Threshold I
+                      </label> 
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;float: none;margin-left: 40px" id="fbaseTxt" placeholder=""/>                     
+                    </div>                                  
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-8 input-group">  
+                      <label class="radio-inline" style="margin-left: 110px">
+                        Threshold II
+                      </label> 
+                      <input type="text" class="form-control" style="border-radius: 4px;width:auto;float: none;margin-left: 40px" id="fbaseTxt" placeholder=""/>                     
+                    </div>                                  
+                  </div>
                 </form>
               </div> <!--/.panel-body -->
             </div> <!-- /#adjusthtml -->
