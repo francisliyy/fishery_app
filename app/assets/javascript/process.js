@@ -18,6 +18,14 @@ $(function() {
     	
     });
 
+    $('#fishingStartDate').datetimepicker({
+    	format:'MMMM Do YYYY',
+    });
+
+    $('#fishingEndDate').datetimepicker({
+    	format:'MMMM Do YYYY',
+    });
+
     let ibParamTable = new Object();
     $("#table-ibParam").bootstrapTable({
     	url: '/Home/GetDepartment',         //请求后台的URL（*）
