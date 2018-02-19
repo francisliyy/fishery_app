@@ -249,44 +249,9 @@
             <div id="ibParam" class="panel-collapse collapse in">
               <div class="panel-body">
                 <form id="form-ibParam">
-                  <table id="table-ibParam" data-toggle="table">
-                      <thead>
-                          <tr>
-                              <th>Age</th>
-                              <th>Stock 1 mean</th>
-                              <th>CV</th>
-                              <th>Stock 2 mean</th>
-                              <th>CV</th>
-                              <th>Maturity Stock 1</th>
-                              <th>Maturity Stock 2</th>
-                              <th>Fecundity Stock 1</th>
-                              <th>Fecundity Stock 2</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                              <td>1</td>
-                              <td>Item 1</td>
-                              <td>$1</td>
-                              <td>Item 1</td>
-                              <td>$1</td>
-                              <td>Item 1</td>
-                              <td>$1</td>
-                              <td>Item 1</td>
-                              <td>$1</td>
-                          </tr>
-                          <tr>
-                              <td>2</td>
-                              <td>Item 2</td>
-                              <td>$2</td>
-                              <td>Item 2</td>
-                              <td>$2</td>
-                              <td>Item 2</td>
-                              <td>$2</td>
-                              <td>Item 2</td>
-                              <td>$2</td>
-                          </tr>
-                      </tbody>
+                  <!-- <table id="table-ibParam" data-toggle="table"> -->
+                  <table id="table-ibParam">
+                      
                   </table>                  
                 </form>
               </div> <!--/.panel-body -->
@@ -1350,10 +1315,14 @@
 {% endblock %}
 {% block tail_js %}
 	  {{super()}}
+    <script type="text/javascript">
+      $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+      alert($SCRIPT_ROOT);
+    </script>
     <script src="{{url_for('static',filename='assets/framework/acc-wizard/accwizard.js')}}"></script>
     <script src="{{url_for('static',filename='assets/node_modules/moment/min/moment.min.js')}}"></script>
     <script src="{{url_for('static',filename='assets/node_modules/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js')}}"></script>
     <script src="{{url_for('static',filename='assets/node_modules/bootstrap-table/dist/bootstrap-table.js')}}"></script>
-    <script src="{{url_for('static',filename='assets/javascript/process.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/javascript/process.js')}}"></script>    
 {% endblock %}
 
