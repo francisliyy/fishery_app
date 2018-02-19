@@ -4,6 +4,8 @@ from flask_appbuilder.views import ModelView, CompactCRUDMixin
 from app import appbuilder, db
 from flask_appbuilder import BaseView, expose, has_access
 from app.models import *
+from app.rutils import *
+from os.path import basename
 
 class ProcessView(BaseView):
 
@@ -11,6 +13,11 @@ class ProcessView(BaseView):
     @expose('/showProcess/')
     @has_access
     def showProcess(self):
+
+"""
+        rUtil = RUtil();
+        rUtil.runScript("/Users/yli120/rfish/rplots.r");
+"""
 
         return self.render_template('/process.html')
 
