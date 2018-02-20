@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="{{url_for('static',filename='assets/framework/acc-wizard/acc-wizard.min.css')}}"></link>
     <link rel="stylesheet" href="{{url_for('static',filename='assets/node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css')}}"></link>
     <link rel="stylesheet" href="{{url_for('static',filename='assets/node_modules/bootstrap-table/dist/bootstrap-table.min.css')}}"></link>
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/common.css')}}"></link>
 {% endblock %}
 {% block content %}
 
@@ -1312,12 +1313,13 @@
         </div>
       </div>
     </div>
+    <div id="mask"></div>
+
 {% endblock %}
 {% block tail_js %}
 	  {{super()}}
     <script type="text/javascript">
       $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
-      alert($SCRIPT_ROOT);
     </script>
     <script src="{{url_for('static',filename='assets/framework/acc-wizard/accwizard.js')}}"></script>
     <script src="{{url_for('static',filename='assets/node_modules/moment/min/moment.min.js')}}"></script>

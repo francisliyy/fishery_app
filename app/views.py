@@ -1,4 +1,4 @@
-from flask import render_template,jsonify
+from flask import render_template,jsonify,Response
 from flask_appbuilder.models.sqla.interface import SQLAInterface
 from flask_appbuilder.views import ModelView, CompactCRUDMixin
 from app import appbuilder, db
@@ -18,16 +18,17 @@ class ProcessView(BaseView):
         return self.render_template('/process.html')
 
 
-    @expose("/getTableData/")
+    @expose('/getTableData/')
     def getTableData(self):
 
         file_obs_E = '/Users/yli120/rfish/Tables/Obs and Pred Sum_E.csv'
         file_obs_W = '/Users/yli120/rfish/Tables/Obs and Pred Sum_W.csv'
 
-        df_E = pd.read_csv(file_obs_E)
-        df_W = pd.read_csv(file_obs_W)
+        df_E = pd.read_csv(file_obs_E,usecols=['Year','Observed'])
+        df_W = pd.read_csv(file_obs_W,usecols=['Year','Observed'])
         df_total = pd.concat([df_E,df_W])
-        return jsonify(df_E.to_json())
+        #return jsonify(df_E.to_json(orient='records'))
+        return Response(df_E.to_json(orient='records'), mimetype='application/json')
 
 
 
