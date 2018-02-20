@@ -18,7 +18,7 @@ class ProcessView(BaseView):
         return self.render_template('/process.html')
 
 
-    @expose('/getTableData/')
+    @expose('/getTableData')
     def getTableData(self):
 
         file_obs_E = '/Users/yli120/rfish/Tables/Obs and Pred Sum_E.csv'
@@ -31,6 +31,10 @@ class ProcessView(BaseView):
         df_total = pd.concat([df_E,df_W],axis=1)
         #return jsonify(df_E.to_json(orient='records'))
         return Response(df_total.to_json(orient='records'), mimetype='application/json')
+
+    @expose('/EditTableData')
+    def editTableData(self):
+        print(request.vars)
 
 
 

@@ -28,7 +28,7 @@ $(function() {
 
 	$("#mask").addClass('lmask');
     $.ajax({
-    	url: $SCRIPT_ROOT+'/processview/getTableData/',
+    	url: $SCRIPT_ROOT+'/processview/getTableData',
     	type: 'get',
     	dataType: 'JSON',
     	data: {param1: 'value1'},
@@ -72,12 +72,12 @@ $(function() {
 	    				title:"East Observed",
 	    				field:"E_Observed",
 	    				editable: {
-		                    type: 'number',
-		                    title: 'Stock 1 mean',
+		                    type: 'text',
+		                    title: 'East Observed',
 		                    validate: function (v) {
-		                        if (isNaN(v)) return 'stock mean must be number';
-		                        var stockmean = parseInt(v);
-		                        if (stockmean <= 0) return 'stock menan must larger than 0';
+		                        if (isNaN(v)) return 'East Observed must be number';
+		                        var stockmean = parseFloat(v);
+		                        if (stockmean <= 0) return 'East Observed must larger than 0';
 			                }
 	                    }
 	    			},
@@ -89,18 +89,30 @@ $(function() {
 	    			{
 	    				title:"West Observed",
 	    				field:"W_Observed",
-	    				editable: {
-		                    type: 'number',
-		                    title: 'Stock 1 mean',
-		                    validate: function (v) {
-		                        if (isNaN(v)) return 'stock mean must be number';
-		                        var stockmean = parseInt(v);
-		                        if (stockmean <= 0) return 'stock menan must larger than 0';
-			                }
-	                    }
+	    				editable:false,
 	    			},
 	    		],
-	    	]
+	    	],
+	    	onEditableSave: function (field, row, oldValue, $el) {
+	    		$.ajax({
+                    type: "post",
+                    url: "/processview/editTableData",
+                    data: row,
+                    dataType: 'JSON',
+                    success: function (data, status) {
+                        if (status == "success") {
+                            alert('提交数据成功');
+                        }
+                    },
+                    error: function () {
+                        alert('编辑失败');
+                    },
+                    complete: function () {
+
+                    }
+
+                });
+	    	},
 	    });
     })
     .fail(function() {
