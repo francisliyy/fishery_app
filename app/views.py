@@ -25,10 +25,12 @@ class ProcessView(BaseView):
         file_obs_W = '/Users/yli120/rfish/Tables/Obs and Pred Sum_W.csv'
 
         df_E = pd.read_csv(file_obs_E,usecols=['Year','Observed'])
+        df_E = df_E.rename(index=str, columns={"Year": "E_Year", "Observed": "E_Observed"})
         df_W = pd.read_csv(file_obs_W,usecols=['Year','Observed'])
-        df_total = pd.concat([df_E,df_W])
+        df_W = df_W.rename(index=str, columns={"Year": "W_Year", "Observed": "W_Observed"})
+        df_total = pd.concat([df_E,df_W],axis=1)
         #return jsonify(df_E.to_json(orient='records'))
-        return Response(df_E.to_json(orient='records'), mimetype='application/json')
+        return Response(df_total.to_json(orient='records'), mimetype='application/json')
 
 
 

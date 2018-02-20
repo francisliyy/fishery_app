@@ -64,13 +64,13 @@ $(function() {
 	    	columns:[
 	    		[
 	    			{
-	    				title:"Age",
-	    				field:"Year",
+	    				title:"East Year",
+	    				field:"E_Year",
 	    				editable:false,
 	    			},
 	    			{
-	    				title:"Stock 1 mean",
-	    				field:"Observed",
+	    				title:"East Observed",
+	    				field:"E_Observed",
 	    				editable: {
 		                    type: 'number',
 		                    title: 'Stock 1 mean',
@@ -80,7 +80,25 @@ $(function() {
 		                        if (stockmean <= 0) return 'stock menan must larger than 0';
 			                }
 	                    }
-	    			}
+	    			},
+	    			{
+	    				title:"West Year",
+	    				field:"W_Year",
+	    				editable:false,
+	    			},
+	    			{
+	    				title:"West Observed",
+	    				field:"W_Observed",
+	    				editable: {
+		                    type: 'number',
+		                    title: 'Stock 1 mean',
+		                    validate: function (v) {
+		                        if (isNaN(v)) return 'stock mean must be number';
+		                        var stockmean = parseInt(v);
+		                        if (stockmean <= 0) return 'stock menan must larger than 0';
+			                }
+	                    }
+	    			},
 	    		],
 	    	]
 	    });
