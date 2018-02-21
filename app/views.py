@@ -1,4 +1,4 @@
-from flask import render_template,jsonify,Response
+from flask import render_template,jsonify,Response,request
 from flask_appbuilder.models.sqla.interface import SQLAInterface
 from flask_appbuilder.views import ModelView, CompactCRUDMixin
 from app import appbuilder, db
@@ -7,6 +7,7 @@ from app.models import *
 from app.rutils import *
 import pandas as pd
 import numpy as np
+import json
 
 class ProcessView(BaseView):
 
@@ -32,9 +33,12 @@ class ProcessView(BaseView):
         #return jsonify(df_E.to_json(orient='records'))
         return Response(df_total.to_json(orient='records'), mimetype='application/json')
 
-    @expose('/EditTableData')
+    @expose('/editTableData', methods = ['POST'])
     def editTableData(self):
-        print(request.vars)
+        inputjson = request.json
+        print(inputjson)
+        print(inputjson["E_Year"])
+        return Response()
 
 
 

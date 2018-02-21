@@ -94,9 +94,10 @@ $(function() {
 	    		],
 	    	],
 	    	onEditableSave: function (field, row, oldValue, $el) {
+	    		console.log(row);
 	    		$.ajax({
                     type: "post",
-                    url: "/processview/editTableData",
+                    url: $SCRIPT_ROOT+"/processview/editTableData",
                     data: row,
                     dataType: 'JSON',
                     success: function (data, status) {
